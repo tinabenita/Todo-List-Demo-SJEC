@@ -40,7 +40,7 @@ We will also connect our backend to the database.
 
 ### Your Task 🚀  
 ✅ Implement the **PUT request** in the backend.  
-✅ Use it in the frontend.  
+✅ Use it in the frontend. Make sure the edit button and edit form component works properly.  
 ✅ Raise a **Pull Request (PR)** or drop me a message on **LinkedIn** (link available on my GitHub profile).  
 
 Happy coding!   
