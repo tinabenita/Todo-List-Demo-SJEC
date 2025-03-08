@@ -11,8 +11,13 @@
 
 ## Backend Setup  
 1. Navigate to the `backend` folder.  
-2. Open the `.sln` file in **Visual Studio**.  
-3. Click **F5** or press **Run** on the top menu to start the API.  
+2. Open the `.sln` file in **Visual Studio**.
+3. Create a `.env` file under **TodoList.Api**.
+4. Add the following connection string in your `.env` file:
+   ```sh
+   ConnectionStrings__DBCon="Host=localhost;Port=5432;Database=todolistdemo;Username=yourUsername;Password=yourPassword"
+   ```
+5. Click **F5** or press **Run** on the top menu to start the API.  
 
 ## Frontend Setup  
 1. Open the `frontend` folder in **Visual Studio Code**.  
