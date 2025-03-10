@@ -15,7 +15,7 @@
 3. Create a `.env` file under **TodoList.Api**.
 4. Add the following connection string in your `.env` file:
    ```sh
-   ConnectionStrings__DBCon="Host=localhost;Port=5432;Database=todolistdemo;Username=yourUsername;Password=yourPassword"
+   ConnectionStrings__DBCon="Host=localhost;Port=5432;Database=todolistdemo;Username=postgres;Password=yourPassword"
    ```
 5. Click **F5** or press **Run** on the top menu to start the API.  
 
@@ -30,7 +30,7 @@
    ```sh
    ng serve -o
    ```
-   This will open the application in your default browser.  
+   This will open the application in your default browser. Make sure you're API is running. 
 
 ## Workshop Tasks  
 During the workshop, we will be adding:   
