@@ -17,7 +17,7 @@
    ```sh
    ConnectionStrings__DBCon="Host=localhost;Port=5432;Database=todolistdemo;Username=postgres;Password=yourPassword"
    ```
-5. Go to `Tools > NuGet Package Manager > Package Manager Console`. Run the following command:
+5. In Visual Studio, go to `Tools > NuGet Package Manager > Package Manager Console`. Run the following command:
    ```sh
    update-database
    ```
@@ -34,7 +34,7 @@
    ```sh
    ng serve -o
    ```
-   This will open the application in your default browser. Make sure you're API is running. 
+   This will open the application in your default browser. Make sure your API is running. 
 
 ## Workshop Tasks  
 During the workshop, we will be adding:   
