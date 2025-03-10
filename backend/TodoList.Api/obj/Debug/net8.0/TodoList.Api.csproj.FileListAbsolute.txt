@@ -426,3 +426,4 @@ C:\Users\tiber\Desktop\sjec-todo-list-demo\backend\TodoList.Api\obj\Debug\net8.0
 C:\Users\tiber\Desktop\sjec-todo-list-demo\backend\TodoList.Api\obj\Debug\net8.0\TodoList.Api.pdb
 C:\Users\tiber\Desktop\sjec-todo-list-demo\backend\TodoList.Api\obj\Debug\net8.0\TodoList.Api.genruntimeconfig.cache
 C:\Users\tiber\Desktop\sjec-todo-list-demo\backend\TodoList.Api\obj\Debug\net8.0\ref\TodoList.Api.dll
+C:\Users\tiber\Desktop\sjec-todo-list-demo\backend\TodoList.Api\obj\Debug\net8.0\TodoList.Api.sourcelink.json

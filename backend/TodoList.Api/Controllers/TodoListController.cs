@@ -12,34 +12,54 @@ public class TodoListController : ControllerBase
 {
 
     //Inject the DB context here
+    private readonly TodoListDbContext _context;
+
+    public TodoListController(TodoListDbContext context)
+    {
+        _context = context;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<TodoListModel>>> GetTodoItems()
+    {
+        return await _context.TodoListItems.ToListAsync();
+    }
 
 
-    //[HttpGet]
-    //public async Task<ActionResult<IEnumerable<TodoListModel>>> GetTodoItems()
-    //{
-
-    //}
-
-
-    //[HttpGet("{id}")]
-    //public async Task<ActionResult<TodoListModel>> GetTodoItem(int id)
-    //{
-
-    //}
+    [HttpGet("{id}")]
+    public async Task<ActionResult<TodoListModel>> GetTodoItem(int id)
+    {
+        var todoItem = await _context.TodoListItems.FindAsync(id);
+        if(todoItem == null)
+        {
+            return NotFound();
+        }
+        return todoItem;
+    }
 
 
-    //[HttpPost]
-    //public async Task<ActionResult<TodoListModel>> PostTodoItem(TodoListModel todoItem)
-    //{
+    [HttpPost]
+    public async Task<ActionResult<TodoListModel>> PostTodoItem(TodoListModel todoItem)
+    {
+        todoItem.Id = Guid.NewGuid();
+        _context.TodoListItems.Add(todoItem);
+        await _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
+    }
 
-    //}
 
-
-    //[HttpDelete("{id}")]
-    //public async Task<IActionResult> DeleteTodoItem(Guid id)
-    //{
-
-    //}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteTodoItem(Guid id)
+    {
+        var todoItem = await _context.TodoListItems.FindAsync(id);
+        if (todoItem == null)
+        {
+            return NotFound();
+        }
+        _context.TodoListItems.Remove(todoItem);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
 
 }
 
