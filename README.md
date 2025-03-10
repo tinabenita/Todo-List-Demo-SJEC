@@ -17,7 +17,11 @@
    ```sh
    ConnectionStrings__DBCon="Host=localhost;Port=5432;Database=todolistdemo;Username=postgres;Password=yourPassword"
    ```
-5. Click **F5** or press **Run** on the top menu to start the API.  
+5. Go to `Tools > NuGet Package Manager > Package Manager Console`. Run the following command:
+   ```sh
+   update-database
+   ```
+6. Click **F5** or press **Run** on the top menu to start the API.  
 
 ## Frontend Setup  
 1. Open the `frontend` folder in **Visual Studio Code**.  
